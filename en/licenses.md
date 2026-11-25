@@ -177,18 +177,9 @@ Those versions used sherpa-onnx (Apache License 2.0, [k2-fsa/sherpa-onnx](https:
 
 ---
 
-## 6. Artwork and trademarks on the website (reflexible.co) {#trademarks}
+## 6. Trademarks on the website (reflexible.co) {#trademarks}
 
-The website reflexible.co uses the following artwork and names to indicate supported operating systems.
-
-### Android robot
-
-- **Where it is used**: The icon indicating the Android version on the reflexible.co home page and the early tester page
-- **Attribution**: The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License.
-- **License**: [Creative Commons Attribution 3.0 Unported (CC BY 3.0)](https://creativecommons.org/licenses/by/3.0/)
-- **Changes**: Only the head is redrawn as a single-color shape
-
-### Trademarks
+The website reflexible.co uses the following names to indicate supported operating systems and stores.
 
 - Android is a trademark of Google LLC.
 - iPhone is a trademark of Apple Inc., registered in the U.S. and other countries.

@@ -176,18 +176,9 @@ Qwen のライセンス: Apache License 2.0 / 出典: [Qwen/Qwen3.6-27B](https:/
 
 ---
 
-## 6. ウェブサイト (reflexible.co) の図版と商標 {#trademarks}
+## 6. ウェブサイト (reflexible.co) の商標 {#trademarks}
 
-ウェブサイト reflexible.co では、対応する OS を示すために次の図版と名称を使用しています。
-
-### Android ロボット
-
-- **使用箇所**: reflexible.co のトップページ・先行テスター募集ページの、Android 版を示すアイコン
-- **帰属表示**: Android ロボットは、Google が作成および提供している作品から複製または変更したものであり、クリエイティブ・コモンズ表示 3.0 ライセンスに記載された条件に従って使用しています。
-- **ライセンス**: [Creative Commons Attribution 3.0 Unported (CC BY 3.0)](https://creativecommons.org/licenses/by/3.0/)
-- **変更の有無**: 頭部だけを単色の図形に描き直しています
-
-### 商標
+ウェブサイト reflexible.co では、対応する OS とストアを示すために次の名称を使用しています。
 
 - Android は Google LLC の商標です。
 - iPhone は、米国および他の国々で登録された Apple Inc. の商標です。iPhone の商標は、アイホン株式会社のライセンスに基づき使用されています。
