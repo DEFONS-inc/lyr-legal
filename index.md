@@ -13,6 +13,7 @@ Reflexible (Android・iOS の翻訳アプリ) の法務文書を掲載してい�
 - [プライバシーポリシー](./privacy.html)
 - [利用規約](./terms.html)
 - [ライセンス表記](./licenses.html)
+- [特定商取引法に基づく表記](./tokushoho.html)
 
 ## English
 
@@ -22,6 +23,7 @@ Reflexible (Android・iOS の翻訳アプリ) の法務文書を掲載してい�
 - [Privacy Policy](./en/privacy.html)
 - [Terms of Service](./en/terms.html)
 - [Open Source Licenses](./en/licenses.html)
+- [Specified Commercial Transactions Act Notice](./en/tokushoho.html)
 
 運営: DEFONS株式会社 / Operated by DEFONS Inc.
 

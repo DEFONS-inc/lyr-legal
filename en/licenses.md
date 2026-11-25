@@ -209,8 +209,4 @@ correct it promptly.
 
 ## Revision history
 
-- **2026-11-04**: Reflects using Silero VAD to detect speech in Audio mode, and adds it to "3. On-device models, including optical character recognition (OCR)"
-- **2026-10-29**: Added "6. Artwork and trademarks on the website (lyr.jp)", with the attribution for the Android robot and trademark notices for Android, iPhone and others
-- **2026-10-27**: Reflects adding Firebase Analytics and RevenueCat to the iOS version, and adds the list for the iOS version to "1. Software libraries"
-- **2026-10-26**: Reflects moving speech recognition for Audio mode to servers and no longer distributing on-device speech recognition models or sherpa-onnx. Server-side models are listed for reference, and the attribution for speech recognition models distributed in earlier versions has moved to "Included in earlier versions". Describes accurately how the speech bubble detection model was trained, and adds the iOS version.
-- **2026-08-06**: Initial version
+- **2026-11-25**: Established.
