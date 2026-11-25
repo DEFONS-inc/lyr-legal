@@ -1,12 +1,12 @@
 ---
 layout: default
 title: 法務文書
-description: LYR (Android・iOS の翻訳アプリ) の法務文書。
+description: Reflexible (Android・iOS の翻訳アプリ) の法務文書。
 ---
 
-# LYR Legal Documents
+# Reflexible Legal Documents
 
-LYR (Android・iOS の翻訳アプリ) の法務文書を掲載しています。
+Reflexible (Android・iOS の翻訳アプリ) の法務文書を掲載しています。
 
 ## 日本語 (原本)
 
@@ -23,4 +23,6 @@ LYR (Android・iOS の翻訳アプリ) の法務文書を掲載しています�
 - [Terms of Service](./en/terms.html)
 - [Open Source Licenses](./en/licenses.html)
 
-お問い合わせ / Contact: hello@lyr.jp
+運営: DEFONS株式会社 / Operated by DEFONS Inc.
+
+お問い合わせ / Contact: contact@defons.co.jp
