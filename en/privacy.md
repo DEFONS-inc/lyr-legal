@@ -435,7 +435,9 @@ The Operator's name and the name of its representative are stated at the top of 
 
 The Operator takes the following security measures for the information it handles.
 
+- **Handling structure**: Personal information is handled only by the Representative Director, who is responsible for its management
 - **Encryption in transit**: All communications among the app, the relay server, the inference servers, and the translation service are encrypted with HTTPS (TLS)
+- **Protecting administrative accounts**: Accounts used to administer the service (such as cloud platforms and app stores) are protected with multi-factor authentication
 - **Access control**: Access to the relay server and the inference servers is limited to the Operator. Credentials for the external translation service and the inference servers are not embedded in the app and are managed server-side. Connecting to the inference server in Audio mode requires a short-lived pass issued by the relay server
 - **Minimizing storage**: Text to be translated, translation results, and audio are not stored on servers and are discarded once processing completes, and they are not written to server logs either. The device identifier and originating IP address are hashed with a secret value and used only for aggregating usage counts; the original values are not stored, and the counts are deleted once the day changes
 - **Protecting on-device data**: The translation cache and settings are stored inside Android's app sandbox and cannot be read by other apps. The translation cache, the device identifier, and coupon records are excluded from device backup and device-to-device transfer (settings such as languages are included).
