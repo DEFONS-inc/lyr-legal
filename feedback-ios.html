@@ -8,9 +8,9 @@
 <!--
   Reflexible iOS 版の「フィードバックを送る」からの入口 (2026-10-31)。Android 版の feedback.html と同じ作り。
 
-  ★iOS 版のフォームを別に持つ理由: Android のフォームは先行テスト向けで、必須の質問に Audio の選択肢が無い・
-  Google Play の国を聞くため、iOS の利用者が正しく答えられない。フォームは lyrios の
-  scripts/release/create_ios_feedback_form.gs で作った (個人アカウント所有)。
+  ★iOS 版のフォームを別に持つ理由: 訳す対象 (動画のみ)・気になる点 (小窓・画面収録)・自動で入る欄 (iOS の版) が
+  Android と違うため。フォームは lyr-ui7 の scripts/release/create_reflexible_feedback_forms.gs で
+  DEFONS の Google アカウントで作った (2026-11-26・旧 LYR のフォームは回答 0 件のまま破棄)。
 
   ★アプリはフォームを直接指さず、必ずこのページを経由する。出荷したアプリの URL は後から変えられないが、
   ここを挟めば下の FORMS を書き換えるだけで全端末が追従する。
@@ -46,21 +46,21 @@
   // ==== 差し替えるのはここと、末尾 noscript の URL ====
   var FORMS = {
     ja: {
-      form: "https://docs.google.com/forms/d/e/1FAIpQLSemBlzdx-Lq6Go_H4YaT1BUp93P0H2x_fJvh1Fp1YEADAMKHQ/viewform",
+      form: "https://docs.google.com/forms/d/e/1FAIpQLSeTT9AicO0NkZn73dhZTYFjq-xhuj4tVTBYjRZEL9wCJt2rPA/viewform",
       map: {
-        v: "entry.1159790446",  // アプリのバージョン
-        d: "entry.1748516940",  // 機種
-        o: "entry.1663969113",  // iOS のバージョン
-        l: "entry.133132616"    // 表示の言語
+        v: "entry.509559962",  // アプリのバージョン
+        d: "entry.2129571102",  // 機種
+        o: "entry.1512256427",  // iOS のバージョン
+        l: "entry.1356631919"    // 表示の言語
       }
     },
     en: {
-      form: "https://docs.google.com/forms/d/e/1FAIpQLSeZs6hf7UNS_Mn4femugcrHPEiNR1kC578b0bY_ShsvIM_UqA/viewform",
+      form: "https://docs.google.com/forms/d/e/1FAIpQLScNwOKlT4IRvPxoG28TMgpu1g2xJyEjvMoh9o3BhKLm1Mwd5w/viewform",
       map: {
-        v: "entry.883531282",
-        d: "entry.1863874791",
-        o: "entry.1802212022",
-        l: "entry.862657000"
+        v: "entry.1970977715",
+        d: "entry.1532346874",
+        o: "entry.1675142777",
+        l: "entry.1814655300"
       }
     }
   };
@@ -87,8 +87,8 @@
 </script>
 <noscript>
   <!-- ★上の FORMS と同じ URL。JS 無効だとスクリプトから書き換えられないため、ここだけは重複を持つ。 -->
-  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSemBlzdx-Lq6Go_H4YaT1BUp93P0H2x_fJvh1Fp1YEADAMKHQ/viewform">フィードバックフォームを開く</a></p>
-  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeZs6hf7UNS_Mn4femugcrHPEiNR1kC578b0bY_ShsvIM_UqA/viewform">Open the feedback form (English)</a></p>
+  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeTT9AicO0NkZn73dhZTYFjq-xhuj4tVTBYjRZEL9wCJt2rPA/viewform">フィードバックフォームを開く</a></p>
+  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScNwOKlT4IRvPxoG28TMgpu1g2xJyEjvMoh9o3BhKLm1Mwd5w/viewform">Open the feedback form (English)</a></p>
 </noscript>
 </body>
 </html>
