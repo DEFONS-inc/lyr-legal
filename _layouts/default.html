@@ -8,7 +8,7 @@
   同じ文書の別言語版への相互リンクを組み立てる。ファイル名 (privacy / terms) は
   言語間で揃えてあるので、URL からどちらの文書かを判定して接頭辞だけ差し替える。
 {%- endcomment -%}
-{%- if page.url contains 'privacy' -%}{%- assign doc = 'privacy' -%}{%- elsif page.url contains 'licenses' -%}{%- assign doc = 'licenses' -%}{%- else -%}{%- assign doc = 'terms' -%}{%- endif -%}
+{%- if page.url contains 'privacy' -%}{%- assign doc = 'privacy' -%}{%- elsif page.url contains 'licenses' -%}{%- assign doc = 'licenses' -%}{%- elsif page.url contains 'tokushoho' -%}{%- assign doc = 'tokushoho' -%}{%- else -%}{%- assign doc = 'terms' -%}{%- endif -%}
 {%- if lang == 'en' -%}
   {%- assign privacy_url = '/en/privacy.html' -%}
   {%- assign terms_url = '/en/terms.html' -%}
@@ -16,9 +16,11 @@
   {%- assign terms_label = 'Terms of Service' -%}
   {%- assign licenses_url = '/en/licenses.html' -%}
   {%- assign licenses_label = 'Licenses' -%}
+  {%- assign tokushoho_url = '/en/tokushoho.html' -%}
+  {%- assign tokushoho_label = 'Commercial Transactions' -%}
   {%- assign alt_url = '/' | append: doc | append: '.html' -%}
   {%- assign alt_label = '日本語' -%}
-  {%- assign back_label = 'Back to lyr.jp →' -%}
+  {%- assign back_label = 'Back to reflexible.co →' -%}
   {%- assign og_locale = 'en_US' -%}
   {%- assign updated_label = 'Last updated: ' -%}
   {%- assign updated_date = page.updated | date: '%B %-d, %Y' -%}
@@ -29,9 +31,11 @@
   {%- assign terms_label = '利用規約' -%}
   {%- assign licenses_url = '/licenses.html' -%}
   {%- assign licenses_label = 'ライセンス表記' -%}
+  {%- assign tokushoho_url = '/tokushoho.html' -%}
+  {%- assign tokushoho_label = '特定商取引法に基づく表記' -%}
   {%- assign alt_url = '/en/' | append: doc | append: '.html' -%}
   {%- assign alt_label = 'English' -%}
-  {%- assign back_label = 'lyr.jp へ戻る →' -%}
+  {%- assign back_label = 'reflexible.co へ戻る →' -%}
   {%- assign og_locale = 'ja_JP' -%}
   {%- assign updated_label = '最終更新日：' -%}
   {%- assign updated_date = page.updated | date: '%Y年%-m月%-d日' -%}
@@ -43,9 +47,9 @@
     <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}" />
     <meta name="theme-color" content="#08090b" />
-    <!-- アプリと同じ筆ペンのアイコン。★lyr.jp を参照せずこのリポジトリに同梱する。
-         法務文書はアプリの設定画面から直接開かれるので、lyr.jp の公開状態に
-         依存させない (現に lyr.jp はまだ公開されていない)。 -->
+    <!-- アプリと同じアイコン。★本体サイトを参照せずこのリポジトリに同梱する。
+         法務文書はアプリの設定画面から直接開かれるので、本体サイトの公開状態に
+         依存させない。 -->
     <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32.png' | relative_url }}" />
     <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}" />
@@ -53,9 +57,9 @@
     <meta property="og:title" content="{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}" />
     <meta property="og:description" content="{{ page.description | default: site.description }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="LYR" />
+    <meta property="og:site_name" content="Reflexible" />
     <meta property="og:locale" content="{{ og_locale }}" />
-    <meta property="og:image" content="https://lyr.jp/og/default.png" />
+    <meta property="og:image" content="https://reflexible.co/og/top/{% if page.lang == 'en' %}en{% else %}ja{% endif %}.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <!-- 法務文書は検索結果に出す必要が無く、出すと本体サイトより先に当たることがある。
          リンクは辿らせたいので nofollow は付けない。 -->
@@ -64,11 +68,11 @@
   <body>
     <header class="lg-head">
       <div class="lg-head-inner">
-        <a class="lg-brand" href="https://lyr.jp/">
-          <img class="lg-logo" src="{{ '/logo-lyr.png' | relative_url }}" alt="LYR" width="333" height="120" />
+        <a class="lg-brand" href="https://reflexible.co/">
+          <img class="lg-logo" src="{{ '/logo-reflexible.png' | relative_url }}" alt="Reflexible" width="444" height="120" />
         </a>
         <span class="lg-tag">Legal</span>
-        <a class="lg-back" href="https://lyr.jp/">{{ back_label }}</a>
+        <a class="lg-back" href="https://reflexible.co/">{{ back_label }}</a>
       </div>
     </header>
 
@@ -105,6 +109,7 @@
           <a href="{{ privacy_url | relative_url }}"{% if doc == 'privacy' %} aria-current="page"{% endif %}>{{ privacy_label }}</a>
           <a href="{{ terms_url | relative_url }}"{% if doc == 'terms' %} aria-current="page"{% endif %}>{{ terms_label }}</a>
           <a href="{{ licenses_url | relative_url }}"{% if doc == 'licenses' %} aria-current="page"{% endif %}>{{ licenses_label }}</a>
+          <a href="{{ tokushoho_url | relative_url }}"{% if doc == 'tokushoho' %} aria-current="page"{% endif %}>{{ tokushoho_label }}</a>
           <!-- 別言語版。日本語版が原本なので、英語版からは必ず日本語版へ戻れるようにする。 -->
           <a href="{{ alt_url | relative_url }}" hreflang="{% if lang == 'en' %}ja{% else %}en{% endif %}" rel="alternate">{{ alt_label }}</a>
         </nav>
@@ -114,8 +119,8 @@
 
     <footer class="lg-foot">
       <div class="lg-foot-inner">
-        <span>© LYR</span>
-        <a href="mailto:hello@lyr.jp">hello@lyr.jp</a>
+        <span>© <a href="https://defons.co.jp/">DEFONS Inc.</a></span>
+        <a href="mailto:contact@defons.co.jp">contact@defons.co.jp</a>
       </div>
     </footer>
   </body>

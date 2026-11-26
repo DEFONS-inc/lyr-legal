@@ -14,7 +14,7 @@
   --dim: #9a9fa7;
   --faint: #5c616a;
   --line: #23262c;
-  --accent: #8eb243;
+  --accent: #B5E8F0;  /* Reflexible のブランドの色 (水色) */
   --sans: system-ui, -apple-system, "Segoe UI", "Hiragino Kaku Gothic ProN",
     "Yu Gothic", YuGothic, "Noto Sans JP", sans-serif;
   --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
@@ -46,8 +46,7 @@ img { max-width: 100%; display: block; }
   display: flex; align-items: center; gap: 14px;
 }
 .lg-brand { display: flex; align-items: center; text-decoration: none; }
-/* lyr.jp のヘッダーと同じ LYR ロゴ。素材は暗い線画なので、暗い板の上では反転させる
-   (lyr.jp 側の .lp-brand img と同じ扱い)。 */
+/* Reflexible のロゴ (Neural R + ワードマーク)。素材は黒なので、暗い板の上では反転させる */
 .lg-logo { height: 20px; width: auto; display: block; filter: invert(1); }
 .lg-tag {
   font-family: var(--mono); font-size: 11px; letter-spacing: .06em;
@@ -101,7 +100,8 @@ h2 {
 }
 h3 { font-size: 18px; font-weight: 700; margin: 30px 0 8px; color: var(--fg); }
 p, li { color: #d7dade; }
-a { color: var(--accent); text-decoration: none; }
+/* 本文のリンクは下線で示す (水色の文字だけでは本文の色と見分けにくいため・色だけに頼らない) */
+a { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 a:hover { text-decoration: underline; }
 strong { color: var(--fg); font-weight: 650; }
 ul, ol { padding-left: 1.35em; }
@@ -141,5 +141,5 @@ code {
   font-family: var(--mono); font-size: 12.5px; color: var(--dim);
 }
 .lg-foot-inner { max-width: 46rem; margin: 0 auto; display: flex; gap: 18px; flex-wrap: wrap; }
-.lg-foot a { color: var(--dim); }
+.lg-foot a { color: var(--dim); text-decoration: underline; text-underline-offset: 3px; }
 .lg-foot a:hover { color: var(--accent); }

@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>LYR フィードバック / Feedback</title>
+<title>Reflexible フィードバック / Feedback</title>
 <!--
-  LYR アプリの「フィードバックを送る」からの入口。
+  Reflexible アプリの「フィードバックを送る」からの入口。
 
   ★アプリはフォームを直接指さず、必ずこのページを経由する。
   出荷済み APK に埋め込んだ URL は後から変えられないため、フォームを直書きすると
@@ -45,31 +45,30 @@
 <script>
 (function () {
   // ==== 差し替えるのはここと、末尾 noscript の URL ====
-  // 2026-08-06: 内部テスト用フォーム。個人アカウント所有の版に差し替え。
-  //   Workspace アカウントで作るとフォーム下部に「このフォームは <組織名> 内部で作成されました」と
-  //   組織名が出るため (テスターから別名義に見える / EU 法人だと EEA 除外の建て付けと干渉する)。
-  //   Workspace → 個人のオーナー移行は Drive の制約でできないので作り直している。
-  //   旧フォーム 2 本 (1FAIpQLSefxuMl6... / 1FAIpQLSdS4Y...) は回答 0 件のまま破棄。
+  // 2026-11-26: DEFONS の Google アカウントで作り直した Reflexible のフォームに差し替え。
+  //   lyr-ui7 の scripts/release/create_reflexible_feedback_forms.gs で作った (Android・iPhone × 日本語・英語の 4 本)。
+  //   フォームの下に「DEFONS 内部で作成」と出るが、運営者が DEFONS株式会社 なので正しい。
+  //   旧 LYR のフォーム (個人アカウント所有) は回答 0 件のまま破棄。
   //
   // ★差し替え直後の 10 分間は古い版が使われる。GitHub Pages が Cache-Control: max-age=600 を
   //   返すため。古い entry ID は Google 側に黙って捨てられ「prefill されない」形で現れるので、
   //   実機確認は 10 分待つか ?cb=<適当な値> を付けて行うこと (2026-08-06 に踏んだ)。
   var FORMS = {
     ja: {
-      form: "https://docs.google.com/forms/d/e/1FAIpQLSdeKABY3UCs9IBpslTJ5t4paAzn-MIFC-AXYwcCK_2kvtQzxg/viewform",
+      form: "https://docs.google.com/forms/d/e/1FAIpQLSeEZRtOIVH-xSql5MKRjfg_t9n55VwDWyuou5317TYDiLtq_A/viewform",
       map: {
-        v: "entry.1422426635",  // アプリバージョン
-        d: "entry.1982042586",  // 端末
-        l: "entry.1356152833"   // UI 言語
+        v: "entry.1732196528",  // アプリバージョン
+        d: "entry.986848739",  // 端末
+        l: "entry.1541998161"   // UI 言語
       }
     },
-    // ★create_feedback_form.gs の createLyrFeedbackFormEn() のログ（FORM_URL・ENTRY_*）を転記する
+    // ★create_reflexible_feedback_forms.gs のログ ([android/en] の FORM_URL・ENTRY_*) を転記する
     en: {
-      form: "https://docs.google.com/forms/d/e/1FAIpQLSe62ADfBj_417v4MOXwZvFwNHhujlF2tHQYJk2x26NeW5Kurg/viewform",
+      form: "https://docs.google.com/forms/d/e/1FAIpQLSdUCyy3-Izu3Tu9hjbPRdYTj7qP-db3I2dRK3ZZKY20ag0vnA/viewform",
       map: {
-        v: "entry.1243702480",
-        d: "entry.561685847",
-        l: "entry.197908203"
+        v: "entry.91057448",
+        d: "entry.583920438",
+        l: "entry.1929439945"
       }
     }
   };
@@ -108,8 +107,8 @@
 <noscript>
   <!-- ★上の FORM と同じ URL を書く。JS 無効だとスクリプトから書き換えられないため、
        ここだけは重複を持つしかない。差し替え時はこちらも直すこと。 -->
-  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdeKABY3UCs9IBpslTJ5t4paAzn-MIFC-AXYwcCK_2kvtQzxg/viewform">フィードバックフォームを開く</a></p>
-  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSe62ADfBj_417v4MOXwZvFwNHhujlF2tHQYJk2x26NeW5Kurg/viewform">Open the feedback form (English)</a></p>
+  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeEZRtOIVH-xSql5MKRjfg_t9n55VwDWyuou5317TYDiLtq_A/viewform">フィードバックフォームを開く</a></p>
+  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdUCyy3-Izu3Tu9hjbPRdYTj7qP-db3I2dRK3ZZKY20ag0vnA/viewform">Open the feedback form (English)</a></p>
 </noscript>
 </body>
 </html>
